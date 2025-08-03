@@ -31,7 +31,7 @@ GET https://api.vpnserver.com.com/api/user/ec**********************-d7fc889e01d3
 ```json
 {
   "download_gb": 5.38,
-  "email": "Dexter",
+  "email": "User1",
   "enable": true,
   "expire_at": "13/06/2025",
   "id": "ec**********************-d7fc889e01d3",
@@ -40,7 +40,7 @@ GET https://api.vpnserver.com.com/api/user/ec**********************-d7fc889e01d3
   "total_gb": 0,
   "upload_gb": 0.15,
   "used_gb": 5.53,
-  "vless_link": "vless://ec**********************-d7fc889e01d3@vpn.server.com:443?...#Dexter"
+  "vless_link": "vless://ec**********************-d7fc889e01d3@vpn.server.com:443?...#User1"
 }
 ```
 
