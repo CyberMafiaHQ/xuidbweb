@@ -74,4 +74,4 @@ python main.py
 - Designed to work perfectly with custom VPN Android apps.
 
 
-Made with ❤️ by [Shadow Commander]
+Made with ❤️ by Shadow Commander
