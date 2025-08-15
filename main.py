@@ -6,11 +6,33 @@
 # License: MIT
 # ================================================
 
+#!/usr/bin/env python3
+print("This program running as a service!")
 import sqlite3
 import json
 from datetime import datetime
 from flask import Flask, jsonify
+import os
 
+CONFIG_PATH = os.path.join(os.path.dirname(__file__), "xuidbweb.conf")
+
+host = "0.0.0.0"
+port = 8000
+
+if os.path.exists(CONFIG_PATH):
+    with open(CONFIG_PATH, "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            key, value = line.split("=", 1)
+            key = key.strip().lower()
+            value = value.strip()
+            if key == "host":
+                host = value
+            elif key == "port":
+                port = int(value)
+                
 DB_PATH = '/etc/x-ui/x-ui.db'
 
 def get_client_info(user_id):
@@ -95,4 +117,5 @@ def ping():
     return jsonify({"status": "ok", "message": "API is working ✅"})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    print(f"Running on {host}:{port}")
+    app.run(host=host, port=port)
