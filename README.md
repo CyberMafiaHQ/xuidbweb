@@ -14,6 +14,23 @@ Users send their UUID via the API endpoint, and receive a JSON response containi
 
 ## 🚀 How to Use
 
+### Test:
+
+```
+GET /api/ping
+```
+
+### Sample Response:
+
+```json
+{
+"message":"API is working \u2705",
+"status":"ok"
+}
+```
+
+
+---
 ### Request:
 
 ```
@@ -56,17 +73,24 @@ cd xuidbweb
 2. Install dependencies:
 
 ```bash
-pip install flask
+apt install python3 python3-flask -y
 ```
 
-3. Run the server:
+3. Install:
 
 ```bash
-python main.py
+bash install.sh
 ```
 
 ---
 
+
+Change port and host after Install:
+
+```bash
+nano /etc/xuidbweb/xuidbweb.conf
+```
+---
 ## 📝 Notes
 
 - This API is stateless and works solely by querying with UUIDs.
