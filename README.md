@@ -86,6 +86,16 @@ apt install python3 python3-flask -y
 ```bash
 bash install.sh
 ```
+4. Change config:
+```bash
+nano /etc/xuidbweb/main.py
+```
+   replace your config in line 93
+
+```bash
+    vless_link = f"vless://{user_id}@[your config here]{email}"
+```
+
 
 ---
 
