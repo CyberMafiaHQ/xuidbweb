@@ -19,6 +19,11 @@ Users send their UUID via the API endpoint, and receive a JSON response containi
 ```
 GET /api/ping
 ```
+### Example:
+
+```
+GET https://api.vpnserver.com/api/ping
+```
 
 ### Sample Response:
 
@@ -40,7 +45,7 @@ GET /api/user/<uuid>
 ### Example:
 
 ```
-GET https://api.vpnserver.com.com/api/user/ec**********************-d7fc889e01d3
+GET https://api.vpnserver.com/api/user/ec**********************-d7fc889e01d3
 ```
 
 ### Sample Response:
